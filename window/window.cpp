@@ -5,6 +5,11 @@
 #include <iostream>
 #include "window.hpp"
 
+
+void framebuffer_size_callback(GLFWwindow* window, int width, int height){
+    glViewport(0, 0, width, height);
+}
+
 GLFWwindow* initWindow(){
 
     int windowWith = 1280;
@@ -46,6 +51,9 @@ GLFWwindow* initWindow(){
     glfwMakeContextCurrent(windowPtr);
     gladLoadGL();
     glViewport(0,0,windowWith,windowHeight);
+
+    //makes it resizable
+    glfwSetFramebufferSizeCallback(windowPtr, framebuffer_size_callback);
 
 
     std::cout << "This works!\n";
