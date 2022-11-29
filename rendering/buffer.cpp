@@ -1,31 +1,32 @@
 //
 // Created by nicolas on 11/28/22.
 //
-
+#include <iostream>
 #include "buffer.hpp"
 
 VertexArrayObject::VertexArrayObject() {
-    generateAndBindVertexArray();
+    generateVertexArray();
 }
 
-void VertexArrayObject::generateAndBindVertexArray() {
+void VertexArrayObject::generateVertexArray() {
     glGenVertexArrays(1, &id);
+}
+
+void VertexArrayObject::bindVertexArray() {
     glBindVertexArray(id);
 }
 
 VertexBuffer::VertexBuffer() {
-    generateAndBindBuffer();
+    generateBuffer();
 }
 
-void VertexBuffer::generateAndBindBuffer() {
+void VertexBuffer::generateBuffer() {
     // Generate 1 buffer
     glGenBuffers(1, &id);
-    // Bind the Buffer
-    glBindBuffer(GL_ARRAY_BUFFER, id);
 }
 
-void VertexBuffer::transferFloatBuffer(const GLfloat* data) {
-    glBufferData(GL_ARRAY_BUFFER, sizeof(data), data, GL_STATIC_DRAW);
+void VertexBuffer::transferFloatBuffer(GLfloat* data,long size) {
+    glBufferData(GL_ARRAY_BUFFER, size, data, GL_STATIC_DRAW);
 }
 
 void VertexBuffer::bindBuffer() const{

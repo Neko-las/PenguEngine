@@ -5,10 +5,22 @@
 #ifndef PENGUENGINE_RENDERER_HPP
 #define PENGUENGINE_RENDERER_HPP
 
-void prepareRendering();
+#include "buffer.hpp"
 
-void render();
+struct Renderer {
 
-void cleanUpRenderer();
+    GLuint programID;
+    VertexBuffer vertexBuffer;
+    VertexArrayObject vertexArrayObject;
+
+    Renderer();
+    ~Renderer() = default;
+
+    void prepareRendering();
+
+    void render() const;
+
+    void cleanUpRenderer();
+};
 
 #endif //PENGUENGINE_RENDERER_HPP

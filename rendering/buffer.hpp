@@ -17,12 +17,12 @@ struct VertexArrayObject{
     /**
      * generates a vertex Array binds it to an id
      */
-    void generateAndBindVertexArray();
+    void generateVertexArray();
 
     /**
      *
      */
-    void BindVertexArray();
+    void bindVertexArray();
 
 };
 
@@ -32,9 +32,9 @@ struct VertexBuffer{
 
     VertexBuffer();
 
-    void generateAndBindBuffer();
+    void generateBuffer();
 
-    void transferFloatBuffer(const GLfloat* data);
+    void transferFloatBuffer(GLfloat* data,long size);
 
     void bindBuffer() const;
 

@@ -1,8 +1,8 @@
-# Install script for directory: /home/nicolas/CLionProjects/PenguEngine/externalLibraries/GLFW/glfw-3.3.6
+# Install script for directory: D:/Coding/Projects/BigProjects/PenguEngine/externalLibraries/GLFW/glfw-3.3.6
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/usr/local")
+  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/PenguEngine")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -27,11 +27,6 @@ if(NOT CMAKE_INSTALL_COMPONENT)
   endif()
 endif()
 
-# Install shared libraries without execute permission?
-if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
-  set(CMAKE_INSTALL_SO_NO_EXE "1")
-endif()
-
 # Is this installation the result of a crosscompile?
 if(NOT DEFINED CMAKE_CROSSCOMPILING)
   set(CMAKE_CROSSCOMPILING "FALSE")
@@ -39,22 +34,22 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "/usr/bin/objdump")
+  set(CMAKE_OBJDUMP "D:/Coding/Tools/CLion 2022.1.3/bin/mingw/bin/objdump.exe")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/nicolas/CLionProjects/PenguEngine/cmake-build-debug/externalLibraries/GLFW/glfw-3.3.6/src/cmake_install.cmake")
+  include("D:/Coding/Projects/BigProjects/PenguEngine/cmake-build-debug/externalLibraries/GLFW/glfw-3.3.6/src/cmake_install.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/nicolas/CLionProjects/PenguEngine/externalLibraries/GLFW/glfw-3.3.6/include/GLFW" FILES_MATCHING REGEX "/glfw3\\.h$" REGEX "/glfw3native\\.h$")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "D:/Coding/Projects/BigProjects/PenguEngine/externalLibraries/GLFW/glfw-3.3.6/include/GLFW" FILES_MATCHING REGEX "/glfw3\\.h$" REGEX "/glfw3native\\.h$")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/glfw3" TYPE FILE FILES
-    "/home/nicolas/CLionProjects/PenguEngine/cmake-build-debug/externalLibraries/GLFW/glfw-3.3.6/src/glfw3Config.cmake"
-    "/home/nicolas/CLionProjects/PenguEngine/cmake-build-debug/externalLibraries/GLFW/glfw-3.3.6/src/glfw3ConfigVersion.cmake"
+    "D:/Coding/Projects/BigProjects/PenguEngine/cmake-build-debug/externalLibraries/GLFW/glfw-3.3.6/src/glfw3Config.cmake"
+    "D:/Coding/Projects/BigProjects/PenguEngine/cmake-build-debug/externalLibraries/GLFW/glfw-3.3.6/src/glfw3ConfigVersion.cmake"
     )
 endif()
 
@@ -62,7 +57,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/glfw3/glfw3Targets.cmake")
     file(DIFFERENT EXPORT_FILE_CHANGED FILES
          "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/glfw3/glfw3Targets.cmake"
-         "/home/nicolas/CLionProjects/PenguEngine/cmake-build-debug/externalLibraries/GLFW/glfw-3.3.6/CMakeFiles/Export/lib/cmake/glfw3/glfw3Targets.cmake")
+         "D:/Coding/Projects/BigProjects/PenguEngine/cmake-build-debug/externalLibraries/GLFW/glfw-3.3.6/CMakeFiles/Export/lib/cmake/glfw3/glfw3Targets.cmake")
     if(EXPORT_FILE_CHANGED)
       file(GLOB OLD_CONFIG_FILES "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/glfw3/glfw3Targets-*.cmake")
       if(OLD_CONFIG_FILES)
@@ -71,13 +66,13 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
       endif()
     endif()
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/glfw3" TYPE FILE FILES "/home/nicolas/CLionProjects/PenguEngine/cmake-build-debug/externalLibraries/GLFW/glfw-3.3.6/CMakeFiles/Export/lib/cmake/glfw3/glfw3Targets.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/glfw3" TYPE FILE FILES "D:/Coding/Projects/BigProjects/PenguEngine/cmake-build-debug/externalLibraries/GLFW/glfw-3.3.6/CMakeFiles/Export/lib/cmake/glfw3/glfw3Targets.cmake")
   if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Dd][Ee][Bb][Uu][Gg])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/glfw3" TYPE FILE FILES "/home/nicolas/CLionProjects/PenguEngine/cmake-build-debug/externalLibraries/GLFW/glfw-3.3.6/CMakeFiles/Export/lib/cmake/glfw3/glfw3Targets-debug.cmake")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/glfw3" TYPE FILE FILES "D:/Coding/Projects/BigProjects/PenguEngine/cmake-build-debug/externalLibraries/GLFW/glfw-3.3.6/CMakeFiles/Export/lib/cmake/glfw3/glfw3Targets-debug.cmake")
   endif()
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/nicolas/CLionProjects/PenguEngine/cmake-build-debug/externalLibraries/GLFW/glfw-3.3.6/src/glfw3.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "D:/Coding/Projects/BigProjects/PenguEngine/cmake-build-debug/externalLibraries/GLFW/glfw-3.3.6/src/glfw3.pc")
 endif()
 

@@ -37,8 +37,8 @@ GLFWwindow* initWindow(){
 
     //for fullscreen
     //GLFWwindow* primaryMonitor = glfwGetPrimaryMonitor();
-    //GLFWwindow* windowPtr = glfwCreateWindow(windowWith,windowHeight,windowTitle,primaryMonitor, nullptr);
-    GLFWwindow* windowPtr = glfwCreateWindow(windowWith,windowHeight,windowTitle,monitors[1], nullptr);
+    GLFWwindow* windowPtr = glfwCreateWindow(windowWith,windowHeight,windowTitle,primaryMonitor, nullptr);
+    //GLFWwindow* windowPtr = glfwCreateWindow(windowWith,windowHeight,windowTitle,monitors[1], nullptr);
 
     if(windowPtr == nullptr){
         std::cout << "Failed to create Window with GLFW!\n";
