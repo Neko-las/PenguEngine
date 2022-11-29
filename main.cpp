@@ -3,13 +3,12 @@
 #include <glad/glad.h>
 
 #include "main.hpp"
+//TODO: write and InputHandler
 #include "input/keyboardInput.hpp"
 #include "input/mouseInput.hpp"
 #include "window/window.hpp"
-
-
-//#externalLibraries "glm/glm.hpp"
-
+#include "rendering/renderer.hpp"
+#include "glm/glm.hpp"
 
 bool isRunning = false;
 GLFWwindow* windowPtr = nullptr;
@@ -36,13 +35,16 @@ int endGame(){
 
 int run(){
 
+    //prepareRendering();
+
     while(!glfwWindowShouldClose(windowPtr) && isRunning){
-        glClearColor(0.8f,0.2f,0.2f,1.0f);
-        glClear(GL_COLOR_BUFFER_BIT);
+
+        //render();
         glfwSwapBuffers(windowPtr);
         glfwPollEvents();
     }
 
+    cleanUpRenderer();
     destroyWindow(windowPtr);
     glfwTerminate();
 
