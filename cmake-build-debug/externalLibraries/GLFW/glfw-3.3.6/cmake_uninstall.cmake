@@ -1,22 +1,22 @@
 
-if (NOT EXISTS "/home/nicolas/CLionProjects/PenguEngine/cmake-build-debug/externalLibraries/GLFW/glfw-3.3.6/install_manifest.txt")
-  message(FATAL_ERROR "Cannot find install manifest: \"/home/nicolas/CLionProjects/PenguEngine/cmake-build-debug/externalLibraries/GLFW/glfw-3.3.6/install_manifest.txt\"")
+if (NOT EXISTS "D:/Coding/Projects/BigProjects/PenguEngine/cmake-build-debug/externalLibraries/GLFW/glfw-3.3.6/install_manifest.txt")
+  message(FATAL_ERROR "Cannot find install manifest: \"D:/Coding/Projects/BigProjects/PenguEngine/cmake-build-debug/externalLibraries/GLFW/glfw-3.3.6/install_manifest.txt\"")
 endif()
 
-file(READ "/home/nicolas/CLionProjects/PenguEngine/cmake-build-debug/externalLibraries/GLFW/glfw-3.3.6/install_manifest.txt" files)
+file(READ "D:/Coding/Projects/BigProjects/PenguEngine/cmake-build-debug/externalLibraries/GLFW/glfw-3.3.6/install_manifest.txt" files)
 string(REGEX REPLACE "\n" ";" files "${files}")
 
 foreach (file ${files})
   message(STATUS "Uninstalling \"$ENV{DESTDIR}${file}\"")
   if (EXISTS "$ENV{DESTDIR}${file}")
-    exec_program("/home/nicolas/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/213.5744.254/bin/cmake/linux/bin/cmake" ARGS "-E remove \"$ENV{DESTDIR}${file}\""
+    exec_program("D:/Coding/Tools/CLion 2022.1.3/bin/cmake/win/bin/cmake.exe" ARGS "-E remove \"$ENV{DESTDIR}${file}\""
                  OUTPUT_VARIABLE rm_out
                  RETURN_VALUE rm_retval)
     if (NOT "${rm_retval}" STREQUAL 0)
       MESSAGE(FATAL_ERROR "Problem when removing \"$ENV{DESTDIR}${file}\"")
     endif()
   elseif (IS_SYMLINK "$ENV{DESTDIR}${file}")
-    EXEC_PROGRAM("/home/nicolas/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/213.5744.254/bin/cmake/linux/bin/cmake" ARGS "-E remove \"$ENV{DESTDIR}${file}\""
+    EXEC_PROGRAM("D:/Coding/Tools/CLion 2022.1.3/bin/cmake/win/bin/cmake.exe" ARGS "-E remove \"$ENV{DESTDIR}${file}\""
                  OUTPUT_VARIABLE rm_out
                  RETURN_VALUE rm_retval)
     if (NOT "${rm_retval}" STREQUAL 0)

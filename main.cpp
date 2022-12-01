@@ -24,6 +24,9 @@ int startGame(){
     if(initMouseInputListener(windowPtr) == -1){
         printf("Failed to initialize MouseListener\n");
     }
+    if(!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)){
+        return -1;
+    }
 
     run();
     return 0;
@@ -34,17 +37,18 @@ int endGame(){
 }
 
 int run(){
+    Renderer renderer = Renderer();
 
-    //prepareRendering();
+    renderer.prepareRendering();
 
     while(!glfwWindowShouldClose(windowPtr) && isRunning){
 
-        //render();
+        renderer.render();
         glfwSwapBuffers(windowPtr);
         glfwPollEvents();
     }
 
-    cleanUpRenderer();
+    renderer.cleanUpRenderer();
     destroyWindow(windowPtr);
     glfwTerminate();
 
