@@ -13,6 +13,9 @@ struct VertexArrayObject{
      * create a VertexArrayObject (VAO)
      */
     VertexArrayObject();
+    ~VertexArrayObject(){
+        glDeleteVertexArrays(1,&id);
+    }
 
     /**
      * generates a vertex Array binds it to an id
@@ -20,9 +23,14 @@ struct VertexArrayObject{
     void generateVertexArray();
 
     /**
-     *
+     *bindVertexArray
      */
-    void bindVertexArray();
+    void bindVertexArray() const;
+
+    /**
+     * unbind vertexArray
+     */
+     void unbindVertexArray();
 
 };
 
@@ -31,12 +39,18 @@ struct VertexBuffer{
     GLuint id;
 
     VertexBuffer();
+    ~VertexBuffer(){
+        unbindVertexBuffer();
+        glDeleteBuffers(1,&id);
+    }
 
     void generateBuffer();
 
     void transferFloatBuffer(GLfloat* data,long size);
 
-    void bindBuffer() const;
+    void bindVertexBuffer() const;
+
+    void unbindVertexBuffer()const;
 
 };
 

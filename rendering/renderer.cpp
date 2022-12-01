@@ -2,12 +2,11 @@
 // Created by nicolas on 11/28/22.
 //
 #include <glad/glad.h>
-#include <iostream>
 #include "renderer.hpp"
 #include "shader.hpp"
 #include "buffer.hpp"
 
-static const GLfloat data[] = {
+GLfloat data[] = {
         -1.0f, -1.0f, 0.0f,
         1.0f,  -1.0f, 0.0f,
         0.0f,  1.0f,  0.0f,
@@ -38,19 +37,18 @@ void Renderer::prepareRendering(){
 
     // bind the Vertex Array Object first, then bind and set vertex buffer(s), and then configure vertex attributes(s).
     vertexArrayObject.bindVertexArray();
-    vertexBuffer.bindBuffer();
+    vertexBuffer.bindVertexBuffer();
 
-    vertexBuffer.transferFloatBuffer(vertices,sizeof(vertices));
+    vertexBuffer.transferFloatBuffer(data,sizeof(data));
 
     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)nullptr);
     glEnableVertexAttribArray(0);
 
     // unbind VertexBuffer
-    glBindBuffer(GL_ARRAY_BUFFER, 0);
+    vertexBuffer.unbindVertexBuffer();
 
     // Unbind VertexArray
-    glBindVertexArray(0);
-    //TODO create unbind functions
+    vertexArrayObject.unbindVertexArray();
 }
 
 void Renderer:: render() const{
@@ -60,16 +58,14 @@ void Renderer:: render() const{
 
     // draw our first triangle
     glUseProgram(programID);
-    glBindVertexArray(vertexArrayObject.id);
-    glDrawArrays(GL_TRIANGLES, 0, 6);
+    vertexArrayObject.bindVertexArray();
+    glDrawArrays(GL_TRIANGLES, 0, 3);
 
 }
 
 void Renderer::cleanUpRenderer(){
-
-    glDeleteBuffers(1,&vertexBuffer.id);
-    glDeleteVertexArrays(1,&vertexArrayObject.id);
     glDeleteProgram(programID);
     vertexBuffer.~VertexBuffer();
+    vertexArrayObject.~VertexArrayObject();
 }
 
