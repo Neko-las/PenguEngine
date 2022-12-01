@@ -50,12 +50,11 @@ int run(){
 
     renderer.cleanUpRenderer();
     destroyWindow(windowPtr);
-    glfwTerminate();
-
     return 0;
 }
 
 int main(){
     std::cout << "Hello, World!" << std::endl;
     startGame();
+    glfwTerminate();
 }
