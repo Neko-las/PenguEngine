@@ -1025,68 +1025,68 @@ namespace detail
 #		pragma message("GLM: Compiler not detected")
 #	endif
 
-	// Report build target
+	// Report cmake-build-debug target
 #	if (GLM_ARCH & GLM_ARCH_AVX2_BIT) && (GLM_MODEL == GLM_MODEL_64)
-#		pragma message("GLM: x86 64 bits with AVX2 instruction set build target")
+#		pragma message("GLM: x86 64 bits with AVX2 instruction set cmake-build-debug target")
 #	elif (GLM_ARCH & GLM_ARCH_AVX2_BIT) && (GLM_MODEL == GLM_MODEL_32)
-#		pragma message("GLM: x86 32 bits with AVX2 instruction set build target")
+#		pragma message("GLM: x86 32 bits with AVX2 instruction set cmake-build-debug target")
 
 #	elif (GLM_ARCH & GLM_ARCH_AVX_BIT) && (GLM_MODEL == GLM_MODEL_64)
-#		pragma message("GLM: x86 64 bits with AVX instruction set build target")
+#		pragma message("GLM: x86 64 bits with AVX instruction set cmake-build-debug target")
 #	elif (GLM_ARCH & GLM_ARCH_AVX_BIT) && (GLM_MODEL == GLM_MODEL_32)
-#		pragma message("GLM: x86 32 bits with AVX instruction set build target")
+#		pragma message("GLM: x86 32 bits with AVX instruction set cmake-build-debug target")
 
 #	elif (GLM_ARCH & GLM_ARCH_SSE42_BIT) && (GLM_MODEL == GLM_MODEL_64)
-#		pragma message("GLM: x86 64 bits with SSE4.2 instruction set build target")
+#		pragma message("GLM: x86 64 bits with SSE4.2 instruction set cmake-build-debug target")
 #	elif (GLM_ARCH & GLM_ARCH_SSE42_BIT) && (GLM_MODEL == GLM_MODEL_32)
-#		pragma message("GLM: x86 32 bits with SSE4.2 instruction set build target")
+#		pragma message("GLM: x86 32 bits with SSE4.2 instruction set cmake-build-debug target")
 
 #	elif (GLM_ARCH & GLM_ARCH_SSE41_BIT) && (GLM_MODEL == GLM_MODEL_64)
-#		pragma message("GLM: x86 64 bits with SSE4.1 instruction set build target")
+#		pragma message("GLM: x86 64 bits with SSE4.1 instruction set cmake-build-debug target")
 #	elif (GLM_ARCH & GLM_ARCH_SSE41_BIT) && (GLM_MODEL == GLM_MODEL_32)
-#		pragma message("GLM: x86 32 bits with SSE4.1 instruction set build target")
+#		pragma message("GLM: x86 32 bits with SSE4.1 instruction set cmake-build-debug target")
 
 #	elif (GLM_ARCH & GLM_ARCH_SSSE3_BIT) && (GLM_MODEL == GLM_MODEL_64)
-#		pragma message("GLM: x86 64 bits with SSSE3 instruction set build target")
+#		pragma message("GLM: x86 64 bits with SSSE3 instruction set cmake-build-debug target")
 #	elif (GLM_ARCH & GLM_ARCH_SSSE3_BIT) && (GLM_MODEL == GLM_MODEL_32)
-#		pragma message("GLM: x86 32 bits with SSSE3 instruction set build target")
+#		pragma message("GLM: x86 32 bits with SSSE3 instruction set cmake-build-debug target")
 
 #	elif (GLM_ARCH & GLM_ARCH_SSE3_BIT) && (GLM_MODEL == GLM_MODEL_64)
-#		pragma message("GLM: x86 64 bits with SSE3 instruction set build target")
+#		pragma message("GLM: x86 64 bits with SSE3 instruction set cmake-build-debug target")
 #	elif (GLM_ARCH & GLM_ARCH_SSE3_BIT) && (GLM_MODEL == GLM_MODEL_32)
-#		pragma message("GLM: x86 32 bits with SSE3 instruction set build target")
+#		pragma message("GLM: x86 32 bits with SSE3 instruction set cmake-build-debug target")
 
 #	elif (GLM_ARCH & GLM_ARCH_SSE2_BIT) && (GLM_MODEL == GLM_MODEL_64)
-#		pragma message("GLM: x86 64 bits with SSE2 instruction set build target")
+#		pragma message("GLM: x86 64 bits with SSE2 instruction set cmake-build-debug target")
 #	elif (GLM_ARCH & GLM_ARCH_SSE2_BIT) && (GLM_MODEL == GLM_MODEL_32)
-#		pragma message("GLM: x86 32 bits with SSE2 instruction set build target")
+#		pragma message("GLM: x86 32 bits with SSE2 instruction set cmake-build-debug target")
 
 #	elif (GLM_ARCH & GLM_ARCH_X86_BIT) && (GLM_MODEL == GLM_MODEL_64)
-#		pragma message("GLM: x86 64 bits build target")
+#		pragma message("GLM: x86 64 bits cmake-build-debug target")
 #	elif (GLM_ARCH & GLM_ARCH_X86_BIT) && (GLM_MODEL == GLM_MODEL_32)
-#		pragma message("GLM: x86 32 bits build target")
+#		pragma message("GLM: x86 32 bits cmake-build-debug target")
 
 #	elif (GLM_ARCH & GLM_ARCH_NEON_BIT) && (GLM_MODEL == GLM_MODEL_64)
-#		pragma message("GLM: ARM 64 bits with Neon instruction set build target")
+#		pragma message("GLM: ARM 64 bits with Neon instruction set cmake-build-debug target")
 #	elif (GLM_ARCH & GLM_ARCH_NEON_BIT) && (GLM_MODEL == GLM_MODEL_32)
-#		pragma message("GLM: ARM 32 bits with Neon instruction set build target")
+#		pragma message("GLM: ARM 32 bits with Neon instruction set cmake-build-debug target")
 
 #	elif (GLM_ARCH & GLM_ARCH_ARM_BIT) && (GLM_MODEL == GLM_MODEL_64)
-#		pragma message("GLM: ARM 64 bits build target")
+#		pragma message("GLM: ARM 64 bits cmake-build-debug target")
 #	elif (GLM_ARCH & GLM_ARCH_ARM_BIT) && (GLM_MODEL == GLM_MODEL_32)
-#		pragma message("GLM: ARM 32 bits build target")
+#		pragma message("GLM: ARM 32 bits cmake-build-debug target")
 
 #	elif (GLM_ARCH & GLM_ARCH_MIPS_BIT) && (GLM_MODEL == GLM_MODEL_64)
-#		pragma message("GLM: MIPS 64 bits build target")
+#		pragma message("GLM: MIPS 64 bits cmake-build-debug target")
 #	elif (GLM_ARCH & GLM_ARCH_MIPS_BIT) && (GLM_MODEL == GLM_MODEL_32)
-#		pragma message("GLM: MIPS 32 bits build target")
+#		pragma message("GLM: MIPS 32 bits cmake-build-debug target")
 
 #	elif (GLM_ARCH & GLM_ARCH_PPC_BIT) && (GLM_MODEL == GLM_MODEL_64)
-#		pragma message("GLM: PowerPC 64 bits build target")
+#		pragma message("GLM: PowerPC 64 bits cmake-build-debug target")
 #	elif (GLM_ARCH & GLM_ARCH_PPC_BIT) && (GLM_MODEL == GLM_MODEL_32)
-#		pragma message("GLM: PowerPC 32 bits build target")
+#		pragma message("GLM: PowerPC 32 bits cmake-build-debug target")
 #	else
-#		pragma message("GLM: Unknown build target")
+#		pragma message("GLM: Unknown cmake-build-debug target")
 #	endif//GLM_ARCH
 
 	// Report platform name

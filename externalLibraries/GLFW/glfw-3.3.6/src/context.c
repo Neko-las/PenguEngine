@@ -452,7 +452,7 @@ GLFWbool _glfwRefreshContextAttribs(_GLFWwindow* window,
     {
         // OpenGL 3.0+ uses a different function for extension string retrieval
         // We cache it here instead of in glfwExtensionSupported mostly to alert
-        // users as early as possible that their build may be broken
+        // users as early as possible that their cmake-build-debug may be broken
 
         window->context.GetStringi = (PFNGLGETSTRINGIPROC)
             window->context.getProcAddress("glGetStringi");

@@ -471,7 +471,7 @@ static void draw_particles(GLFWwindow* window, double t, float dt)
     // Update frame counter
     thread_sync.d_frame++;
 
-    // Loop through all particles and build vertex arrays.
+    // Loop through all particles and cmake-build-debug vertex arrays.
     particle_count = 0;
     vptr = vertex_array;
     pptr = particles;
@@ -608,7 +608,7 @@ static void draw_fountain(void)
     float  x, y;
     int m, n;
 
-    // The first time, we build the fountain display list
+    // The first time, we cmake-build-debug the fountain display list
     if (!fountain_list)
     {
         fountain_list = glGenLists(1);
@@ -696,7 +696,7 @@ static void tessellate_floor(float x1, float y1, float x2, float y2, int depth)
 
 
 //========================================================================
-// Draw floor. We build the floor recursively and let the tessellation in the
+// Draw floor. We cmake-build-debug the floor recursively and let the tessellation in the
 // center (near x,y=0,0) be high, while the tessellation around the edges be
 // low.
 //========================================================================
@@ -711,7 +711,7 @@ static void draw_floor(void)
         glBindTexture(GL_TEXTURE_2D, floor_tex_id);
     }
 
-    // The first time, we build the floor display list
+    // The first time, we cmake-build-debug the floor display list
     if (!floor_list)
     {
         floor_list = glGenLists(1);

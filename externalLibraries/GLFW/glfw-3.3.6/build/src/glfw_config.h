@@ -30,7 +30,7 @@
 // As glfw_config.h, this file defines compile-time option macros for a
 // specific platform and development environment.  If you are using the
 // GLFW CMake files, modify glfw_config.h.in instead of this file.  If you
-// are using your own build system, make this file define the appropriate
+// are using your own cmake-build-debug system, make this file define the appropriate
 // macros in whatever way is suitable.
 //========================================================================
 

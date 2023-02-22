@@ -522,7 +522,7 @@ BOOL _glfwIsWindowsVersionOrGreaterWin32(WORD major, WORD minor, WORD sp)
     return RtlVerifyVersionInfo(&osvi, mask, cond) == 0;
 }
 
-// Checks whether we are on at least the specified build of Windows 10
+// Checks whether we are on at least the specified cmake-build-debug of Windows 10
 //
 BOOL _glfwIsWindows10BuildOrGreaterWin32(WORD build)
 {

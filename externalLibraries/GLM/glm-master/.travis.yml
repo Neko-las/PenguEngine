@@ -373,16 +373,16 @@ before_script:
 
 script:
   - ${CC} --version
-  - mkdir ./build
-  - cd ./build
+  - mkdir ./cmake-build-debug
+  - cd ./cmake-build-debug
   - cmake -DCMAKE_INSTALL_PREFIX=$TRAVIS_BUILD_DIR/install -DCMAKE_CXX_COMPILER=$COMPILER ${CMAKE_BUILD_ENV} ..
-  - cmake --build . ${CMAKE_ENV}
+  - cmake --cmake-build-debug . ${CMAKE_ENV}
   - ctest ${CTEST_ENV}
-  - cmake --build . --target install ${CMAKE_ENV}
+  - cmake --cmake-build-debug . --target install ${CMAKE_ENV}
   - cd $TRAVIS_BUILD_DIR
   - mkdir ./build_test_cmake
   - cd ./build_test_cmake
   - cmake -DCMAKE_CXX_COMPILER=$COMPILER $TRAVIS_BUILD_DIR/test/cmake/ -DCMAKE_PREFIX_PATH=$TRAVIS_BUILD_DIR/install
-  - cmake --build .
+  - cmake --cmake-build-debug .
 
 

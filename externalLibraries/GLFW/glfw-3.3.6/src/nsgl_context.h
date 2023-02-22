@@ -24,7 +24,7 @@
 //
 //========================================================================
 
-// NOTE: Many Cocoa enum values have been renamed and we need to build across
+// NOTE: Many Cocoa enum values have been renamed and we need to cmake-build-debug across
 //       SDK versions where one is unavailable or the other deprecated
 //       We use the newer names in code and these macros to handle compatibility
 #if MAC_OS_X_VERSION_MAX_ALLOWED < 101400

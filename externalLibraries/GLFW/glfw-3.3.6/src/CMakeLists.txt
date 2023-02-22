@@ -119,7 +119,7 @@ target_include_directories(glfw PRIVATE
 target_link_libraries(glfw PRIVATE ${glfw_LIBRARIES})
 
 # Make GCC warn about declarations that VS 2010 and 2012 won't accept for all
-# source files that VS will build (Clang ignores this because we set -std=c99)
+# source files that VS will cmake-build-debug (Clang ignores this because we set -std=c99)
 if (CMAKE_C_COMPILER_ID STREQUAL "GNU")
     set_source_files_properties(context.c init.c input.c monitor.c vulkan.c
                                 window.c win32_init.c win32_joystick.c

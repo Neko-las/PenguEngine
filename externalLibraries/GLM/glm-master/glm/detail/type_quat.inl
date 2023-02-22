@@ -197,7 +197,7 @@ namespace detail
 		}
 		else
 		{
-			// Otherwise, build quaternion the standard way.
+			// Otherwise, cmake-build-debug quaternion the standard way.
 			t = cross(u, v);
 		}
 

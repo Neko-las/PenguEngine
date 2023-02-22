@@ -4591,9 +4591,9 @@ NK_API int nk_input_is_key_down(const struct nk_input*, enum nk_keys);
 typedef nk_ushort nk_draw_index;
 enum nk_draw_list_stroke {
     NK_STROKE_OPEN = nk_false,
-    /* build up path has no connection back to the beginning */
+    /* cmake-build-debug up path has no connection back to the beginning */
     NK_STROKE_CLOSED = nk_true
-    /* build up path has a connection back to the beginning */
+    /* cmake-build-debug up path has a connection back to the beginning */
 };
 
 enum nk_draw_vertex_layout_attribute {
@@ -15131,7 +15131,7 @@ nk_build(struct nk_context *ctx)
         nk_draw_image(&ctx->overlay, mouse_bounds, &cursor->img, nk_white);
         nk_finish_buffer(ctx, &ctx->overlay);
     }
-    /* build one big draw command list out of all window buffers */
+    /* cmake-build-debug one big draw command list out of all window buffers */
     it = ctx->begin;
     buffer = (nk_byte*)ctx->memory.memory.ptr;
     while (it != 0) {
@@ -25406,7 +25406,7 @@ nk_tooltipfv(struct nk_context *ctx, const char *fmt, va_list args)
 ///                        to is quite limited at the moment, but I would be more than
 ///                        happy to accept PRs to add additional.
 /// - 2016/08/30 (1.14.2) - Removed unused variables
-/// - 2016/08/30 (1.14.1) - Fixed C++ build errors
+/// - 2016/08/30 (1.14.1) - Fixed C++ cmake-build-debug errors
 /// - 2016/08/30 (1.14.0) - Removed mouse dragging from SDL demo since it does not work correctly
 /// - 2016/08/30 (1.13.4) - Tweaked some default styling variables
 /// - 2016/08/30 (1.13.3) - Hopefully fixed drawing bug in slider, in general I would
